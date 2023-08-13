@@ -4,11 +4,11 @@ timer.start()
 
 print("aaaaaaaaaaaaaaaa")
 
-#timer.force_stop()
-timer.reset()
+timer.force_stop()
+
 print("bbbbbbbbbbbbbbbbbbbb")
 
-
+timer.reset()
 
 print("ccccccccccccccccca")
 
