@@ -4,8 +4,8 @@ timer.start()
 
 print("aaaaaaaaaaaaaaaa")
 
-
-
+#timer.force_stop()
+timer.reset()
 print("bbbbbbbbbbbbbbbbbbbb")
 
 

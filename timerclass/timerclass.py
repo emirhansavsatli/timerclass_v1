@@ -7,6 +7,13 @@ class Timer:
         self.timeout = False
         self.thread = None
 
+    def reset(self):
+        self.timeout = False
+
+    def force_stop(self):
+        self.timeout = True
+        if self.thread and self.thread.is_alive():
+            self.thread.join()
 
     def stop(self):
         self.timeout = True
@@ -20,7 +27,7 @@ class Timer:
                 break
 
     def start(self):
-        if self.thread is None:
+        if self.thread is None or not self.thread.is_alive():
             self.timeout = False
             self.thread = threading.Thread(target=self.timer_thread)
             self.thread.start()
