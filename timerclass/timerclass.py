@@ -9,6 +9,9 @@ class Timer:
 
     def reset(self):
         self.timeout = False
+        self.timeout = False
+        self.thread = None
+        self.start()
 
     def force_stop(self):
         self.timeout = True
